@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="MJTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="414" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrV-EN-Ld1" customClass="BaseLabel">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SI-L4-OQY" customClass="BaseButton">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="82" id="I0R-tT-rv9"/>
+                            <constraint firstAttribute="height" constant="38" id="jj5-zS-z5u"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="19"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <real key="value" value="1.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-pf-Ncr" customClass="BaseImageView">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="a6Y-h2-NRM"/>
+                            <constraint firstAttribute="width" constant="64" id="cL1-NL-WGc"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pen" translatesAutoresizingMaskIntoConstraints="NO" id="Wv5-7c-GKZ" customClass="PenImageView">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="3sX-sE-kVt"/>
+                            <constraint firstAttribute="height" constant="64" id="Afu-Cb-2W2"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RrV-EN-Ld1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="1T0-Tc-Z5p"/>
+                    <constraint firstItem="4SI-L4-OQY" firstAttribute="leading" secondItem="RrV-EN-Ld1" secondAttribute="trailing" constant="59" id="26w-aX-iBi"/>
+                    <constraint firstItem="Wv5-7c-GKZ" firstAttribute="centerY" secondItem="yJX-pf-Ncr" secondAttribute="centerY" id="5F0-W8-GdP"/>
+                    <constraint firstItem="yJX-pf-Ncr" firstAttribute="leading" secondItem="Wv5-7c-GKZ" secondAttribute="trailing" constant="15" id="MJw-gG-HWA"/>
+                    <constraint firstItem="yJX-pf-Ncr" firstAttribute="centerY" secondItem="4SI-L4-OQY" secondAttribute="centerY" id="SSE-QT-vu7"/>
+                    <constraint firstItem="RrV-EN-Ld1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="l7t-tR-p7S"/>
+                    <constraint firstAttribute="trailing" secondItem="yJX-pf-Ncr" secondAttribute="trailing" constant="20" id="tbe-Lj-jtw"/>
+                    <constraint firstItem="4SI-L4-OQY" firstAttribute="centerY" secondItem="RrV-EN-Ld1" secondAttribute="centerY" id="yg9-ck-1ku"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mj_button" destination="4SI-L4-OQY" id="geV-uL-P3E"/>
+                <outlet property="mj_titleLaebl" destination="RrV-EN-Ld1" id="7Xf-c9-JEx"/>
+            </connections>
+            <point key="canvasLocation" x="171" y="102"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="apple" width="64" height="64"/>
+        <image name="pen" width="64" height="64"/>
+    </resources>
+</document>
